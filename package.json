@@ -1,0 +1,22 @@
+{
+  "name": "list-expander",
+  "version": "1.0.0",
+  "description": "Click a button, expand the adjoining list",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olemak/list-expander.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Ole Martin Kristiansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olemak/list-expander/issues"
+  },
+  "homepage": "https://github.com/olemak/list-expander#readme"
+}

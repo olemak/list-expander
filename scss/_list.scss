@@ -1,0 +1,22 @@
+.list {
+    &.container {
+        border: 4px solid blue;
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        flex-flow: column wrap;        
+    }
+    &.item {
+     //   border: 1px solid red;
+        flex: 1 1 25%;
+        order: 2;        
+    }
+    .heading {
+        flex: 1 1 100%;
+        order: 1;
+    }
+}
+
+#expand-large-list:checked ~ ul.list.container {
+    border-color: green;
+}
