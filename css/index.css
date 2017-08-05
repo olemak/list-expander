@@ -1,14 +1,33 @@
+.hidden, main .large .list .list.item:nth-child(1n+13), main .small .list .list.item:nth-child(1n+5) {
+  max-height: 0;
+  border-width: 0;
+  margin: 0 0.2em;
+  transform: translateX(90deg);
+}
+
+.revealed, .expand-list:checked ~ ul.list.container .item:nth-child(1n+5) {
+  max-height: 6rem;
+  border-width: 1px;
+  transform: translateX(0deg);
+  transition: all 0.75s;
+  margin: 0.2em;
+}
+
 .list.container {
-  border: 4px solid blue;
   list-style-type: none;
   padding-left: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
 }
 
 .list.item {
-  flex: 1 1 25%;
+  box-sizing: border-box;
+  flex: 1 1 40%;
   order: 2;
+  border: 1px solid grey;
+  text-align: center;
+  overflow: hidden;
+  margin: 0.2em;
 }
 
 .list .heading {
@@ -16,6 +35,35 @@
   order: 1;
 }
 
-#expand-large-list:checked ~ ul.list.container {
+.expand-list {
+  display: none;
+}
+
+.expand-list + label {
+  text-align: center;
+}
+
+.expand-list:checked + label {
+  display: none;
+}
+
+.expand-list:checked ~ ul.list.container {
   border-color: green;
+}
+
+main {
+  display: flex;
+  flex-flow: row no-wrap;
+}
+
+main .large {
+  flex: 1 1 70%;
+}
+
+main .large .list .list.item {
+  flex: 1 1 22%;
+}
+
+main .small {
+  flex: 1 1 30%;
 }
