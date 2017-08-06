@@ -2,13 +2,13 @@
     max-height: 0;
     border-width: 0;
     margin: 0 0.2em;
-    transform: translateX(90deg);
+    transform: rotateX(90deg);
 }
 
 .revealed {
-    max-height: 6rem;
+    max-height: 8rem;
     border-width: 1px;
-    transform: translateX(0deg);
+    transform: rotateX(0deg);
     transition: all 0.75s;
     margin: 0.2em;
 }
@@ -41,10 +41,10 @@
 
 .expand-list {
     display: none;
-    & + label {
+    & ~ label {
         text-align: center;
     }
-    &:checked + label {
+    &:checked ~ label {
         display: none;
     }
 }
@@ -71,6 +71,30 @@ main {
                 flex: 1 1 22%;
                 &:nth-child(1n+13) {
                     @extend .hidden;
+                }
+                &:nth-child(13){
+                    transition-delay: 0.25s !important;
+                }
+                &:nth-child(14){
+                    transition-delay: 0.5s !important;
+                }
+                &:nth-child(15){
+                    transition-delay: 0.75s !important;
+                }
+                &:nth-child(16){
+                    transition-delay: 1s !important;
+                }
+                &:nth-child(17){
+                    transition-delay: 1.25s !important;
+                }
+                &:nth-child(18){
+                    transition-delay: 1.5s !important;
+                }
+                &:nth-child(19){
+                    transition-delay: 1.75s !important;
+                }
+                &:nth-child(20){
+                    transition-delay: 2s !important;
                 }
             }
         }
